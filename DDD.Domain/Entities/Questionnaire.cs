@@ -1,8 +1,6 @@
-using DDD.Domain.ValueObjects;
-
 namespace DDD.Domain.Entities;
 
-public sealed class Questionnaire
+public sealed class Questionnaire(ValueObjects.Version internalVersion)
 {
-    public ValueObjects.Version InternalVersion { get; set;}
+    public ValueObjects.Version InternalVersion => internalVersion;
 }
